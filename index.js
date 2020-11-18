@@ -35,24 +35,24 @@ async function login(driver) {
     //WAIT TILL BODY ELEMENT GOT LOADED
     driver.wait(sel.until.elementsLocated(sel.By.css("body")), 10000);
 
-    delay(2000);
+    await delay(2000);
     //Enter Email
     await (await driver.findElement(sel.By.id(email))).sendKeys(cred.email);
-    delay(2000);
+    await delay(2000);
     //Click Next
     await (await driver.findElement(sel.By.id(button))).click();
-    delay(2000);
+    await delay(2000);
     //Enter Password
     await (await driver.findElement(sel.By.id(password))).sendKeys(
       cred.password
     );
     //Click Next
-    delay(2000);
+    await delay(2000);
     await (await driver.findElement(sel.By.id(button))).click();
-    delay(2000);
+    await delay(2000);
     //Click Yes on Stay signed In
     await (await driver.findElement(sel.By.id(button))).click();
-    delay(2000);
+    await delay(2000);
     //Click Use Website
     await (await driver.findElement(sel.By.className("use-app-lnk"))).click();
     // Inititate Join Classess
@@ -102,7 +102,7 @@ async function joinClasses(driver) {
  */
 async function joinClass(lecture, driver) {
   try {
-    delay(5000);
+    await delay(5000);
     console.log(`Trying Joining ${lecture.name} class`);
     let date = new Date();
     console.log("Setting Dates");
@@ -132,7 +132,7 @@ async function joinClass(lecture, driver) {
     const classes = await driver.findElements(
       sel.By.className("name-channel-type")
     );
-    delay(1000);
+    await delay(1000);
 
     for (const cls of classes) {
       const className = await (
@@ -148,7 +148,11 @@ async function joinClass(lecture, driver) {
 
     console.log(`curretnTime: ${new Date().toString()}`);
     console.log(`joingTime:${joiningDate.toString()}`);
-    console.log(`Waiting Time:-- ${joiningDate.getTime() - date.getTime()}`);
+    console.log(
+      `Waiting Time:-- ${
+        (joiningDate.getTime() - date.getTime()) / 1000
+      } seconds`
+    );
 
     //Wait till current time match the lecture start time
     //if the current time exceed the lecture start time it will wait fro only 1 second
@@ -162,7 +166,7 @@ async function joinClass(lecture, driver) {
     );
 
     console.log(`Waiting 2000ms`);
-    delay(2000);
+    await delay(2000);
 
     console.log("Trying To Find Join Button");
 
@@ -183,7 +187,7 @@ async function joinClass(lecture, driver) {
         console.log("Button Still not found");
         console.log("Waiting for a mint");
         //Wait for 58 Seconds
-        await new Promise((r) => setTimeout(r, 58000));
+        await await new Promise((r) => setTimeout(r, 58000));
         console.log("Refreshing Page");
         driver.navigate().refresh();
         //Wait for 10 seconds
@@ -194,7 +198,7 @@ async function joinClass(lecture, driver) {
     //If button not found then terminate the function
     if (k == 15) return false;
 
-    delay(2000);
+    await delay(2000);
 
     //Turning Off Webcam
     console.log("turning off webcam");
@@ -229,31 +233,36 @@ async function joinClass(lecture, driver) {
     leavingTime.setHours(lecture.endTime.split(":")[0]);
     leavingTime.setMinutes(lecture.endTime.split(":")[1]);
     console.log("Waiting for lecture to end");
+    console.log(
+      `Waiting for ${(leavingTime.getTime() - date.getTime()) / 1000} seconds`
+    );
     await new Promise((r) =>
       setTimeout(
         r,
-        date.getTime() - leavingTime.getTime() < 0
+        leavingTime.getTime() - date.getTime() < 0
           ? 1000
-          : date.getTime() - leavingTime.getTime()
+          : leavingTime.getTime() - date.getTime()
       )
     );
     try {
       console.log("Trying to end meeting");
-      await (
-        await driver.findElement(
-          sel.By.xpath(`//\*[@id="teams-app-bar"]/ul/li[3]`)
-        )
-      ).click();
-      await new Promise((r) => setTimeout(r, 1000));
+
       await (
         await driver.findElement(sel.By.className("ts-calling-screen"))
       ).click();
+      await new Promise((r) => setTimeout(r, 1000));
+      // await (
+      //   await driver.findElement(
+      //     sel.By.xpath(`//\*[@id="teams-app-bar"]/ul/li[3]`)
+      //   )
+      // ).click();
       await new Promise((r) => setTimeout(r, 1000));
       await (
         await driver.findElement(sel.By.xpath(`//\*[@id="hangup-button"]`))
       ).click();
       console.log("Lecture Left");
     } catch (err) {
+      console.log(err);
       console.log("Class Already Ended By Teacher");
     }
     return true;
