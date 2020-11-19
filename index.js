@@ -1,7 +1,6 @@
 const sel = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const fs = require("fs");
-// const { setTimeout } = require("timers");
 const email = "i0116";
 const password = "i0118";
 const button = "idSIButton9";
@@ -126,6 +125,12 @@ async function joinClass(lecture, driver) {
       console.log(`${lecture.name} Lecture Ended`);
       return false;
     }
+    await delay(1200);
+    await (
+      await driver.findElement(
+        sel.By.xpath(`//\*[@id="teams-app-bar"]/ul/li[3]`)
+      )
+    ).click();
 
     //SELECTING THE LECTURE FROM LIST
     console.log("Finding Lecture Button");
@@ -251,11 +256,7 @@ async function joinClass(lecture, driver) {
         await driver.findElement(sel.By.className("ts-calling-screen"))
       ).click();
       await new Promise((r) => setTimeout(r, 1000));
-      // await (
-      //   await driver.findElement(
-      //     sel.By.xpath(`//\*[@id="teams-app-bar"]/ul/li[3]`)
-      //   )
-      // ).click();
+
       await new Promise((r) => setTimeout(r, 1000));
       await (
         await driver.findElement(sel.By.xpath(`//\*[@id="hangup-button"]`))
