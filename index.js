@@ -20,8 +20,7 @@ const delay = async (delayTime) =>
 
 /**
  *
- * LOGIN FUNCTION
- *
+ * Login Function
  * It will login your teams account
  * you must declare email and password in separate cred.json file
  *

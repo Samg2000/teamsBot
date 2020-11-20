@@ -1,7 +1,7 @@
 [{
         "day": 1,
         "lecture": [{
-                "name": "HTML A",
+                "name": "HTML SEC A",
                 "startTime": "11:00",
                 "endTime": "11:35"
             },
@@ -32,7 +32,7 @@
     {
         "day": 2,
         "lecture": [{
-                "name": "HTML A",
+                "name": "HTML SEC A",
                 "startTime": "11:00",
                 "endTime": "11:35"
             },
@@ -63,7 +63,7 @@
     {
         "day": 3,
         "lecture": [{
-                "name": "HTML A",
+                "name": "HTML SEC A",
                 "startTime": "11:00",
                 "endTime": "12:10"
             },
@@ -94,7 +94,7 @@
     {
         "day": 4,
         "lecture": [{
-                "name": "HTML A",
+                "name": "HTML SEC A",
                 "startTime": "11:00",
                 "endTime": "11:35"
             },
@@ -120,9 +120,9 @@
     {
         "day": 5,
         "lecture": [{
-                "name": "HTML A",
+                "name": "HTML SEC A",
                 "startTime": "11:00",
-                "endTime": "12:10PM"
+                "endTime": "11:35"
             },
             {
                 "name": "SYSTEM ANALYSIS AND DESIGN SEC A",
