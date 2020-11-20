@@ -1,60 +1,38 @@
 [{
         "day": 1,
         "lecture": [{
-                "name": "HTML SEC A",
+                "name": "Lecture 1",
                 "startTime": "11:00",
                 "endTime": "11:35"
             },
             {
-                "name": "SYSTEM ANALYSIS AND DESIGN SEC A",
+                "name": "Lecture 2",
                 "startTime": "12:26",
                 "endTime": "13:05"
             },
             {
-                "name": "ENGLISH SEC A",
+                "name": "Lecture 3",
                 "startTime": "13:06",
                 "endTime": "13:35"
-            },
-            {
-                "name": "System Software SEC A",
-                "startTime": "14:06",
-                "endTime": "14:40"
-            },
-            {
-                "name": "Java (Theory) SEC A",
-                "startTime": "14:42",
-                "endTime": "15:15"
             }
         ]
-
-
     },
     {
         "day": 2,
         "lecture": [{
-                "name": "HTML SEC A",
+                "name": "Lecture 1",
                 "startTime": "11:00",
                 "endTime": "11:35"
             },
             {
-                "name": "SYSTEM ANALYSIS AND DESIGN SEC A",
+                "name": "Lecture 2",
                 "startTime": "12:26",
                 "endTime": "13:05"
             },
             {
-                "name": "ENGLISH SEC A",
+                "name": "Lecture 3",
                 "startTime": "13:06",
                 "endTime": "13:35"
-            },
-            {
-                "name": "System Software SEC A",
-                "startTime": "14:06",
-                "endTime": "14:40"
-            },
-            {
-                "name": "Java (Theory) SEC A",
-                "startTime": "14:42",
-                "endTime": "15:15"
             }
         ]
 
@@ -63,29 +41,19 @@
     {
         "day": 3,
         "lecture": [{
-                "name": "HTML SEC A",
+                "name": "Lecture 1",
                 "startTime": "11:00",
                 "endTime": "12:10"
             },
             {
-                "name": "SYSTEM ANALYSIS AND DESIGN SEC A",
+                "name": "Lecture 2",
                 "startTime": "12:26",
                 "endTime": "13:05"
             },
             {
-                "name": "ENGLISH SEC A",
+                "name": "Lecture 3",
                 "startTime": "13:06",
                 "endTime": "13:35"
-            },
-            {
-                "name": "System Software SEC A",
-                "startTime": "14:06",
-                "endTime": "14:40"
-            },
-            {
-                "name": "Java (Theory) SEC A",
-                "startTime": "14:42",
-                "endTime": "15:15"
             }
         ]
 
@@ -94,24 +62,14 @@
     {
         "day": 4,
         "lecture": [{
-                "name": "HTML SEC A",
+                "name": "Lecture 1",
                 "startTime": "11:00",
                 "endTime": "11:35"
             },
             {
-                "name": "SYSTEM ANALYSIS AND DESIGN SEC A",
+                "name": "Lecture 2",
                 "startTime": "12:26",
                 "endTime": "13:05"
-            },
-            {
-                "name": "System Software SEC A",
-                "startTime": "14:06",
-                "endTime": "14:40"
-            },
-            {
-                "name": "Java (Theory) SEC A",
-                "startTime": "14:42",
-                "endTime": "15:15"
             }
         ]
 
@@ -120,25 +78,14 @@
     {
         "day": 5,
         "lecture": [{
-                "name": "HTML SEC A",
+                "name": "Lecture 1",
                 "startTime": "11:00",
                 "endTime": "11:35"
             },
             {
-                "name": "SYSTEM ANALYSIS AND DESIGN SEC A",
+                "name": "Lecture 2",
                 "startTime": "12:26",
                 "endTime": "13:05"
-            },
-
-            {
-                "name": "System Software SEC A",
-                "startTime": "14:06",
-                "endTime": "14:40"
-            },
-            {
-                "name": "Java (Theory) SEC A",
-                "startTime": "14:42",
-                "endTime": "15:15"
             }
         ]
 
