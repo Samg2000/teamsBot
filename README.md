@@ -13,7 +13,7 @@ There are some things you need to configure
 
 ## Install
 
-- Clone the repository git clone https://github.com/teja156/microsoft-teams-class-attender
+- Clone the repository git clone https://github.com/Samg2000/teamsBot
 - install node.js
 - install selenium webdriver `npm i selenium-webdriver`
 
